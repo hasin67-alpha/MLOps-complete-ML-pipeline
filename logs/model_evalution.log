@@ -15,3 +15,6 @@
 2026-07-02 22:50:28,305 - model_evalution - DEBUG - Model loaded from ./model/model.pkl
 2026-07-02 22:50:28,313 - model_evalution - DEBUG - Data loaded from ./data/interim/test_processed.csv
 2026-07-02 22:50:28,333 - model_evalution - DEBUG - Metrics saved to reports/metrics.json
+2026-07-03 01:18:02,057 - model_evalution - DEBUG - Model loaded from ./model/model.pkl
+2026-07-03 01:18:02,089 - model_evalution - DEBUG - Data loaded from ./data/interim/test_processed.csv
+2026-07-03 01:18:02,110 - model_evalution - DEBUG - Metrics saved to reports/metrics.json

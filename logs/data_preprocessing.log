@@ -18,3 +18,9 @@
 2026-07-02 22:16:33,672 - Data Preprocessing - DEBUG - Type column encoded
 2026-07-02 22:16:33,673 - Data Preprocessing - DEBUG - Type column encoded
 2026-07-02 22:16:33,708 - Data Preprocessing - DEBUG - Processed data saved to ./data\interim
+2026-07-03 01:17:41,487 - Data Preprocessing - DEBUG - Data loaded  ./data/raw/train.csv
+2026-07-03 01:17:41,518 - Data Preprocessing - DEBUG - Data loaded  ./data/raw/test.csv
+2026-07-03 01:17:41,519 - Data Preprocessing - DEBUG - Data loaded properly
+2026-07-03 01:17:41,522 - Data Preprocessing - DEBUG - Type column encoded
+2026-07-03 01:17:41,522 - Data Preprocessing - DEBUG - Type column encoded
+2026-07-03 01:17:41,560 - Data Preprocessing - DEBUG - Processed data saved to ./data\interim
