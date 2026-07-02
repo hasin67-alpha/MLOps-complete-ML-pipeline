@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split,GridSearchCV
 from xgboost import XGBClassifier
 
 import xgboost as xgb
-
+import yaml
 
 
 
@@ -46,6 +46,24 @@ logger.addHandler(file_handler)
 
 
 
+def load_params(params_path:str)->dict:
+    try:
+        with open(params_path,'r') as file:
+            params=yaml.safe_load(file)
+        logger.debug('Parameters retrieved from %s', params_path)
+        return params
+    except FileNotFoundError:
+        logger.error('File not found: %s', params_path)
+        raise
+    except yaml.YAMLError as e:
+        logger.error('YAML error: %s', e)
+        raise
+    except Exception as e:
+        logger.error('Unexpected error: %s', e)
+        raise
+
+
+
 def load_data(file_path: str) -> pd.DataFrame:
     
     try:
@@ -65,6 +83,9 @@ def load_data(file_path: str) -> pd.DataFrame:
 def train_model(df:pd.DataFrame):
 
     try:
+
+        params=load_params(params_path='params.yaml')
+
         X=df.drop(columns='Machine failure')
         y=df['Machine failure']
 
@@ -82,18 +103,14 @@ def train_model(df:pd.DataFrame):
         base_model = xgb.XGBClassifier(scale_pos_weight=weight, random_state=42, eval_metric='logloss')
 
         # parameter tuining
-        param_grid = {
-            'n_estimators': [100, 200, 300],
-            'max_depth': [3, 5, 7],
-            'learning_rate': [0.01, 0.1, 0.2]
-        }
+        param_grid =params['params_grid']
 
         # GridSearchCV
         grid_search = GridSearchCV(
             estimator=base_model,
             param_grid=param_grid,
-            scoring='f1',
-            cv=3,
+            scoring=params['model_building']['scoring'],
+            cv=params['model_building']['cv_folds'],
             verbose=1,
             n_jobs=-1
         )
@@ -141,12 +158,6 @@ def main():
         print(f"Error: {e}")
 
         
-
-
-
-
-
-
 
 
 

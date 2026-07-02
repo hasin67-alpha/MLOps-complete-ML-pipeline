@@ -15,3 +15,10 @@
 2026-07-03 01:17:57,283 - model_building - DEBUG - best parameter: {'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 300}
 
 2026-07-03 01:17:57,292 - model_building - DEBUG - Model saved duccessfully
+2026-07-03 03:01:23,934 - model_building - DEBUG - Data loaded  ./data/interim/train_processed.csv
+2026-07-03 03:01:23,936 - model_building - DEBUG - Parameters retrieved from params.yaml
+2026-07-03 03:01:23,946 - model_building - DEBUG - Calculated scale_pos_weight
+2026-07-03 03:01:33,354 - model_building - DEBUG - Training completed
+2026-07-03 03:01:33,354 - model_building - DEBUG - best parameter: {'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 300}
+
+2026-07-03 03:01:33,363 - model_building - DEBUG - Model saved duccessfully

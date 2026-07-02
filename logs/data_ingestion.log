@@ -4,3 +4,11 @@
 2026-07-03 01:17:38,506 - data_ingestion - DEBUG - Data Loaded from experiments/predictive_maintenance.csv
 2026-07-03 01:17:38,523 - data_ingestion - DEBUG - Data Preporocessing completed
 2026-07-03 01:17:38,577 - data_ingestion - DEBUG - Train and test data saved to ./data\raw
+2026-07-03 02:37:08,166 - data_ingestion - DEBUG - Parameters retrieved from params.yaml
+2026-07-03 02:37:08,167 - data_ingestion - ERROR - Failed to complete the data ingestion process: string indices must be integers, not 'str'
+2026-07-03 02:41:37,719 - data_ingestion - DEBUG - Parameters retrieved from params.yaml
+2026-07-03 02:41:37,720 - data_ingestion - ERROR - Failed to complete the data ingestion process: string indices must be integers, not 'str'
+2026-07-03 02:45:47,386 - data_ingestion - DEBUG - Parameters retrieved from params.yaml
+2026-07-03 02:45:47,415 - data_ingestion - DEBUG - Data Loaded from experiments/predictive_maintenance.csv
+2026-07-03 02:45:47,427 - data_ingestion - DEBUG - Data Preporocessing completed
+2026-07-03 02:45:47,470 - data_ingestion - DEBUG - Train and test data saved to ./data\raw
