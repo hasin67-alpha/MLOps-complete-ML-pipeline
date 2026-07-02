@@ -1,0 +1,3 @@
+2026-07-02 17:17:18,868 - data_ingestion - DEBUG - Data Loaded from experiments/predictive_maintenance.csv
+2026-07-02 17:17:18,871 - data_ingestion - DEBUG - Data Preporocessing completed
+2026-07-02 17:17:18,911 - data_ingestion - DEBUG - Train and test data saved to ./data\raw

@@ -1,0 +1,17 @@
+2026-07-02 22:42:14,754 - model_evalution - ERROR - File not found: /model/model.pkl
+2026-07-02 22:42:14,756 - model_evalution - ERROR - Failed to complete the model evaluation process: [Errno 2] No such file or directory: '/model/model.pkl'
+2026-07-02 22:44:53,942 - model_evalution - ERROR - File not found: /model/model.pkl
+2026-07-02 22:44:53,943 - model_evalution - ERROR - Failed to complete the model evaluation process: [Errno 2] No such file or directory: '/model/model.pkl'
+2026-07-02 22:45:11,199 - model_evalution - DEBUG - Model loaded from ./model/model.pkl
+2026-07-02 22:45:11,224 - model_evalution - DEBUG - Data loaded from ./data/interim/test_processed.csv
+2026-07-02 22:45:11,240 - model_evalution - DEBUG - Metrics saved to reports/metrics.json
+2026-07-02 22:48:26,079 - model_evalution - DEBUG - Model loaded from ./model/model.pkl
+2026-07-02 22:48:26,086 - model_evalution - DEBUG - Data loaded from ./data/interim/test_processed.csv
+2026-07-02 22:48:26,101 - model_evalution - DEBUG - Metrics saved to reports/metrics.json
+2026-07-02 22:50:15,933 - model_evalution - DEBUG - Model loaded from ./model/model.pkl
+2026-07-02 22:50:15,940 - model_evalution - DEBUG - Data loaded from ./data/interim/test_processed.csv
+2026-07-02 22:50:15,957 - model_evalution - ERROR - Unexpected error occurred during model evaluation: type dict doesn't define __round__ method
+2026-07-02 22:50:15,958 - model_evalution - ERROR - Failed to complete the model evaluation process: type dict doesn't define __round__ method
+2026-07-02 22:50:28,305 - model_evalution - DEBUG - Model loaded from ./model/model.pkl
+2026-07-02 22:50:28,313 - model_evalution - DEBUG - Data loaded from ./data/interim/test_processed.csv
+2026-07-02 22:50:28,333 - model_evalution - DEBUG - Metrics saved to reports/metrics.json

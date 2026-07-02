@@ -1,0 +1,11 @@
+2026-07-02 21:51:46,817 - Data Preprocessing - DEBUG - Calculated scale_pos_weight
+2026-07-02 21:51:54,061 - Data Preprocessing - DEBUG - Training completed
+2026-07-02 21:51:54,062 - Data Preprocessing - DEBUG - best parameter: {'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 300}
+
+2026-07-02 21:51:54,069 - Data Preprocessing - DEBUG - Model saved duccessfully
+2026-07-02 22:16:43,646 - Data Preprocessing - DEBUG - Data loaded  ./data/interim/train_processed.csv
+2026-07-02 22:16:43,649 - Data Preprocessing - DEBUG - Calculated scale_pos_weight
+2026-07-02 22:16:51,300 - Data Preprocessing - DEBUG - Training completed
+2026-07-02 22:16:51,301 - Data Preprocessing - DEBUG - best parameter: {'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 300}
+
+2026-07-02 22:16:51,309 - Data Preprocessing - DEBUG - Model saved duccessfully

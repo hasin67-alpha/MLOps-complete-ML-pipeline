@@ -1,0 +1,20 @@
+2026-07-02 18:58:35,482 - Data Preprocessing - DEBUG - Data loaded properly
+2026-07-02 18:58:35,490 - Data Preprocessing - DEBUG - Type column encoded
+2026-07-02 18:58:35,491 - Data Preprocessing - DEBUG - Type column encoded
+2026-07-02 18:58:35,526 - Data Preprocessing - DEBUG - Processed data saved to ./data\interim
+2026-07-02 21:46:24,344 - Data Preprocessing - DEBUG - Calculated scale_pos_weight
+2026-07-02 21:46:32,779 - Data Preprocessing - DEBUG - Training completed
+2026-07-02 21:46:32,779 - Data Preprocessing - DEBUG - best parameter: {'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 300}
+
+2026-07-02 21:46:32,780 - Data Preprocessing - ERROR - Failed to complete the model building process: cannot access local variable 'save_model' where it is not associated with a value
+2026-07-02 21:50:50,375 - Data Preprocessing - DEBUG - Calculated scale_pos_weight
+2026-07-02 21:50:59,135 - Data Preprocessing - DEBUG - Training completed
+2026-07-02 21:50:59,136 - Data Preprocessing - DEBUG - best parameter: {'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 300}
+
+2026-07-02 21:50:59,145 - Data Preprocessing - DEBUG - Model saved duccessfully
+2026-07-02 22:16:33,665 - Data Preprocessing - DEBUG - Data loaded  ./data/raw/train.csv
+2026-07-02 22:16:33,669 - Data Preprocessing - DEBUG - Data loaded  ./data/raw/test.csv
+2026-07-02 22:16:33,669 - Data Preprocessing - DEBUG - Data loaded properly
+2026-07-02 22:16:33,672 - Data Preprocessing - DEBUG - Type column encoded
+2026-07-02 22:16:33,673 - Data Preprocessing - DEBUG - Type column encoded
+2026-07-02 22:16:33,708 - Data Preprocessing - DEBUG - Processed data saved to ./data\interim
