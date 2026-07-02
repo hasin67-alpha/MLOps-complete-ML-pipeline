@@ -156,7 +156,7 @@ def evaluate_model(model, X_test: np.ndarray, y_test: np.ndarray) -> dict:
             
             # params save 
             live.log_params(params)
-            
+             
         return metrics_summary
 
     except ValueError as val_err:
