@@ -1,0 +1,20 @@
+data_ingestion:
+  test_size: 0.2
+model_building:
+  random_state: 42
+  eval_metric: logloss
+  cv_folds: 3
+  scoring: f1
+params_grid:
+  n_estimators:
+  - 100
+  - 200
+  - 300
+  max_depth:
+  - 3
+  - 5
+  - 7
+  learning_rate:
+  - 0.01
+  - 0.1
+  - 0.2

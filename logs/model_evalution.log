@@ -18,3 +18,16 @@
 2026-07-03 01:18:02,057 - model_evalution - DEBUG - Model loaded from ./model/model.pkl
 2026-07-03 01:18:02,089 - model_evalution - DEBUG - Data loaded from ./data/interim/test_processed.csv
 2026-07-03 01:18:02,110 - model_evalution - DEBUG - Metrics saved to reports/metrics.json
+2026-07-03 03:35:49,875 - model_evalution - DEBUG - Model loaded from ./model/model.pkl
+2026-07-03 03:35:49,913 - model_evalution - DEBUG - Data loaded from ./data/interim/test_processed.csv
+2026-07-03 03:35:49,920 - model_evalution - DEBUG - Parameters retrieved from params.yaml
+2026-07-03 03:35:50,971 - model_evalution - ERROR - Unexpected error occurred during model evaluation: Data 'confusion matrix' has not supported type <class 'list'>
+2026-07-03 03:35:50,971 - model_evalution - ERROR - Failed to complete the model evaluation process: Data 'confusion matrix' has not supported type <class 'list'>
+2026-07-03 03:38:38,994 - model_evalution - DEBUG - Model loaded from ./model/model.pkl
+2026-07-03 03:38:38,999 - model_evalution - DEBUG - Data loaded from ./data/interim/test_processed.csv
+2026-07-03 03:38:39,003 - model_evalution - DEBUG - Parameters retrieved from params.yaml
+2026-07-03 03:38:39,019 - model_evalution - DEBUG - Metrics saved to reports/metrics.json
+2026-07-03 03:47:39,961 - model_evalution - DEBUG - Model loaded from ./model/model.pkl
+2026-07-03 03:47:39,967 - model_evalution - DEBUG - Data loaded from ./data/interim/test_processed.csv
+2026-07-03 03:47:39,970 - model_evalution - DEBUG - Parameters retrieved from params.yaml
+2026-07-03 03:47:40,801 - model_evalution - DEBUG - Metrics saved to reports/metrics.json

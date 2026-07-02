@@ -5,7 +5,8 @@ import pickle
 import json
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 import logging
-
+import yaml
+from dvclive import Live
 
 
 
@@ -35,6 +36,39 @@ file_handler.setFormatter(formatter)
 
 logger.addHandler(console_handler)
 logger.addHandler(file_handler)
+
+
+
+
+
+
+
+
+def load_params(params_path:str)->dict:
+    try:
+        with open(params_path,'r') as file:
+            params=yaml.safe_load(file)
+        logger.debug('Parameters retrieved from %s', params_path)
+        return params
+    except FileNotFoundError:
+        logger.error('File not found: %s', params_path)
+        raise
+    except yaml.YAMLError as e:
+        logger.error('YAML error: %s', e)
+        raise
+    except Exception as e:
+        logger.error('Unexpected error: %s', e)
+        raise
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -75,6 +109,7 @@ def load_data(file_path: str) -> pd.DataFrame:
 def evaluate_model(model, X_test: np.ndarray, y_test: np.ndarray) -> dict:
 
     try:
+        params=load_params(params_path='params.yaml')
 
         y_pred = model.predict(X_test)
 
@@ -94,6 +129,34 @@ def evaluate_model(model, X_test: np.ndarray, y_test: np.ndarray) -> dict:
             "classification_report": cls_report
         }
 
+
+
+        # real cls name find from y_test
+        class_names = [str(c) for c in np.unique(y_test)]
+        class_a = class_names[0]
+        class_b = class_names[1] 
+
+        # dvclive implement for save params when checking different numbers
+        with Live(save_dvc_exp=True) as live:
+            
+            # acc record
+            live.log_metric('accuracy', float(acc))
+    
+            #  class-1 (precision and recall)
+            live.log_metric(f'precision_{class_a}', cls_report[class_a]['precision'])
+            live.log_metric(f'recall_{class_a}', cls_report[class_a]['recall'])
+            
+            #  class-2 (precision and recall)
+            live.log_metric(f'precision_{class_b}', cls_report[class_b]['precision'])
+            live.log_metric(f'recall_{class_b}', cls_report[class_b]['recall'])
+            
+            # overall 'macro avg' Precision ও Recall লগ করা
+            live.log_metric('macro_precision', cls_report['macro avg']['precision'])
+            live.log_metric('macro_recall', cls_report['macro avg']['recall'])
+            
+            # params save 
+            live.log_params(params)
+            
         return metrics_summary
 
     except ValueError as val_err:
@@ -128,7 +191,6 @@ def save_metrics(metrics: dict, file_path: str) -> None:
 
 def main():
     try:
-
         model=load_model(file_path="./model/model.pkl")
         test_data=load_data(file_path="./data/interim/test_processed.csv")
         
@@ -136,6 +198,7 @@ def main():
         y_test = test_data.iloc[:, -1].values
 
         metrics=evaluate_model(model,X_test,y_test)
+
 
         save_metrics(metrics,'reports/metrics.json')
 
